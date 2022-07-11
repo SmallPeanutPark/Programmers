@@ -31,6 +31,6 @@ int solution(string s) {
             ans += s[i];
         }
     }
-    int answer = stoi(ans);
-    return answer;
+    
+    return stoi(ans);
 }
