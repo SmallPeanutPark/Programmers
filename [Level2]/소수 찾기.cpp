@@ -59,6 +59,5 @@ int solution(string numbers) {
 
         } while (next_permutation(numvector.begin(), numvector.end()));
     }
-    cout << answer;
     return answer;
 }
