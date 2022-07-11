@@ -37,10 +37,8 @@ int solution(string numbers) {
             for (int j = 0; j < len; ++j) {
                 if (temp[j]) {
                     s += to_string(numvector[j]);
-                    cout << numvector[j];
                 }
             }
-            cout << '\n';
             int slength = s.length();
             if (slength == 1) {
                 if (arr[s[0] - '0'] == 0) {
