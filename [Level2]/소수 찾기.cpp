@@ -33,7 +33,7 @@ int solution(string numbers) {
     // 아래와 같이 사용하면 1자리부터 len 자리수까지 순열을 구할 수 있다.
     for (int i = 1; i <= len; ++i) {
         vector<bool> temp(len - i, false);
-        temp.insert(temp.end(), i, true);
+        temp.insert(temp.end(), i, true); // 구하고자하는 자리수에 따라 vector에 자리수만큼의 개수를 추가하고 true값으로 초기화
         do {
             string s;
             for (int j = 0; j < len; ++j) {
