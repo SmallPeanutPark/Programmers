@@ -11,7 +11,7 @@ int solution(int n) {
 	{
 		for (int j = i + i; j <= n; j += i)
 		{
-            if (v[j - 1] == 1)
+		    	if (v[j - 1] == 1)
 			{
 				continue;
 			}
