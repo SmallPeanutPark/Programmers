@@ -13,9 +13,11 @@ vector<int> solution(int brown, int yellow) {
     for (int i = 1; i <= plus; ++i) {
         int num = plus / i;
         
-        // 큰 값이 가로, 몫이 크거나 같을 떄만
+        // 큰 값이 가로, 몫이 크거나 같을 떄만 추가
         if (num >= i)
             m.insert(make_pair(num, i));
+        else
+            break;
     }
 
     map<int, int>::iterator iter;
