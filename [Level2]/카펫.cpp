@@ -22,7 +22,8 @@ vector<int> solution(int brown, int yellow) {
     for (iter = m.begin(); iter != m.end(); ++iter) {
         int row = (iter->first) * 2;
         int column = ((iter->second) * 2) - 4;
-        if ((row + column == brown) && (column > 0)) {
+        if ((row + column == brown) && (column > 0) &&
+           (((iter->first -2) * (iter->second -2)) == yellow)) {
             answer.push_back(iter->first);
             answer.push_back(iter->second);
             break;
