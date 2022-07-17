@@ -9,14 +9,14 @@ vector<int> solution(vector<string> id_list, vector<string> report, int k) {
     vector<pair<string, int>> user_check;
 
     for (int i = 0; i < id_list_len; ++i) {
-        user_check.push_back(make_pair(id_list[i], 0));
+        user_check.push_back(make_pair(id_list[i], 0)); // 결과 값 도출을 위한 vector
     }
 
     vector<int> answer;
     map<pair<string, string>, int> m; // report, 횟수 저장
     map<pair<string, string>, int>::iterator m_iter;
 
-    map<string ,int> usercase_report; // 피의자, 횟수 저장
+    map<string ,int> usercase_report; // 신고대상, 횟수 저장
     map<string, int>::iterator usercase_report_iter;
 
     vector<string> stop_id; // 정지 아이디 저장 신고횟수가 k보다 크거나 같을 때 저장
