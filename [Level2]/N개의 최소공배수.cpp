@@ -20,7 +20,7 @@ int gcd(int a, int b) {
 }
 
 // 최소 공배수 구하기
-int lcd(int a, int b) {
+int lcm(int a, int b) {
     return a * b / gcd(a, b);
 }
 
@@ -33,7 +33,7 @@ int solution(vector<int> arr) {
     int len = arr.size();
     answer = arr[0];
     for(int i = 1; i < len; ++i) {
-        answer = lcd(answer, arr[i]);
+        answer = lcm(answer, arr[i]);
     }
 
     return answer;
