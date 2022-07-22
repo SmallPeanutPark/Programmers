@@ -14,7 +14,7 @@ int solution(vector<int> scoville, int K) {
     
     int num = pq.top();
     while (true) {
-        if (!pq.empty()) {
+        if ((!pq.empty()) && (pq.size() != 1)) {
             if (num < K) {
                 pq.pop();
                 if (!pq.empty()) {
