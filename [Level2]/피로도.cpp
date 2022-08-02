@@ -5,7 +5,6 @@
 using namespace std;
 
 int solution(int k, vector<vector<int>> dungeons) {
-    int answer = 0;
     int result = 0;
     int len = dungeons.size();
     sort(dungeons.begin(), dungeons.end());
