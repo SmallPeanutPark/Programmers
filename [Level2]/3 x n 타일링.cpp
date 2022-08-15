@@ -9,7 +9,7 @@ long long tiling(int n) {
     if(n % 2 != 0) return 0;
     if(dp[n] != 0) return dp[n] % MODULAR;
     else {
-        long long result = (3 % MODULAR * tiling(n-2) % MODULAR);
+        long long result = ((3  * tiling(n-2)) % MODULAR);
         for(int i = 4; i <= n; i += 2) {
             result += ((2*tiling(n - i)) % MODULAR);
         }
