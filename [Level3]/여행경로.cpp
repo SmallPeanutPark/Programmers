@@ -8,7 +8,6 @@ using namespace std;
 vector<bool> visited;
 vector<string> answer;
 int len;
-bool isret;
 
 bool dfs(string cur, vector<vector<string>>& t, int usedtickets) {
     // 탈출 조건 필요
