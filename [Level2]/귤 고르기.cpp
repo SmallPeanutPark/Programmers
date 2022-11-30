@@ -9,13 +9,13 @@ vector<int> box;
 
 void setBox(vector<int>& t) {
     for(int i = 0; i < t.size(); ++i) {
-        box[t[i]-1] += 1;
+        box[t[i]] += 1;
     }
 }
 
 int solution(int k, vector<int> tangerine) {
     sort(tangerine.begin(), tangerine.end(), greater<int>());
-    box.resize(tangerine[0]);
+    box.resize(tangerine[0] + 1);
     setBox(tangerine);
     sort(box.begin(), box.end(), greater<int>());
     int answer = 0;
