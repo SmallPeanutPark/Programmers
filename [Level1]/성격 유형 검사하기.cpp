@@ -29,7 +29,7 @@ string solution(vector<string> survey, vector<int> choices) {
         } else if(4 == choices[i]) {
             // nothing
         } else {
-            // 5 <= choices[i] && choices[i] >= 7
+            // 5 <= choices[i] && choices[i] <= 7
             totalScore[secondtype] += score[choices[i]];
         }
     }  
