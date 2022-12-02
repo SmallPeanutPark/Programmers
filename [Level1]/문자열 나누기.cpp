@@ -8,16 +8,15 @@ vector<string> d;
 
 void divideStr(string str) {
     string plus = ""; // 읽은 문자열 
-    plus += str[0];
     
-    char first = str[0]; // 첫글자
+    char first = '0'; // 첫글자
     
-    int samecnt = 1; // 같은 글자 개수
+    int samecnt = 0; // 같은 글자 개수
     int differcnt = 0; // 다른 글자 개수
     
     int len = str.length();
-    bool isinit = false;
-    for(int i = 1; i <= len; ++i) {
+    bool isinit = true;
+    for(int i = 0; i < len; ++i) {
         if(isinit == true) {
             // 초기값 읽을 때
             isinit = false;
@@ -43,14 +42,14 @@ void divideStr(string str) {
                     isinit = true;
                 }
             }
-            if(samecnt != differcnt) {
+        }
+        if(samecnt != differcnt) {
                 // 두 횟수가 다른 상태
                 
                 // 더이상 읽을 글자가 없다 -> 문자열의 끝을 의미하는 것으로 보임
-                if(i == len) {
+                if(i == len - 1) {
                     d.emplace_back(plus);
                 }
-            }
         }
     }
 }
